@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 # part of the name after the first dash is displayed 
-for FILE in $(ls)
+list=$(ls)
+for FILE in $list
 do
 echo "$FILE" | cut -d "-" -f 2
 done
