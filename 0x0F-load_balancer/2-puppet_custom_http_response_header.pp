@@ -1,4 +1,6 @@
 # Nginx web server setup and configuration
+include stdlib
+
 exec { 'apt-get-update':
   command => '/usr/bin/apt-get update',
 }
