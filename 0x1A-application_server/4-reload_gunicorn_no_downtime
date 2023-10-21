@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# Set gunicorn to relaod gracefully
+items="$(pgrep gunicorn | tr '\n' ' ')"
+data=${items:-none}
+if [ "$data" != "none" ]
+then
+	for itm in $items
+	do
+		kill -HUP "$itm"
+	done
+fi
